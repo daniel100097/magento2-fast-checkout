@@ -5,10 +5,39 @@
         <link src="M2FC_M2FC::dist/m2fc.js"/>
     </head>
     <body>
-        <referenceBlock name="checkout.root" remove="true">
+        <referenceBlock name="checkout.root">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="checkout" xsi:type="array">
+                            <item name="children" xsi:type="array">
+                                <item name="steps" xsi:type="array">
+                                    <item name="config" xsi:type="array">
+                                        <item name="componentDisabled" xsi:type="boolean">true</item>
+                                    </item>
+                                </item>
+                                <item name="authentication" xsi:type="array">
+                                    <item name="config" xsi:type="array">
+                                        <item name="componentDisabled" xsi:type="boolean">true</item>
+                                    </item>
+                                </item>
+                                <item name="messages" xsi:type="array">
+                                    <item name="config" xsi:type="array">
+                                        <item name="componentDisabled" xsi:type="boolean">true</item>
+                                    </item>
+                                </item>
+
+                                <item name='m2fc_react' xsi:type="array">
+                                    <item name="component" xsi:type="string">M2FC_M2FC/js/view/react</item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
         </referenceBlock>
 
-        <referenceBlock name="page.main.title" template="M2FC_M2FC::index.phtml"/>
+        <!-- <referenceBlock name="page.main.title" template="M2FC_M2FC::index.phtml"/> -->
 
     </body>
 </page>

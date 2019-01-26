@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Checkout from './components/ecosystem/Checkout';
 import Theme from './Theme';
 
 async function bootstrap() {
     ReactDOM.render(
         <Theme>
-            <div>RENDER!</div>
+            <Checkout />
         </Theme>,
-        document.querySelector('#m2fc-root')
+        document.querySelector('#m2fc')
     );
 }
 
-window.addEventListener('DOMContentLoaded', () => bootstrap());
+// @ts-ignore
+window.m2fc_bootstrap = bootstrap;
