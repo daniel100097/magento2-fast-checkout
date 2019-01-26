@@ -11,7 +11,7 @@ function isProd() {
 }
 
 module.exports = {
-    entry: './src/index.tsx',
+    entry: ['babel-polyfill', './src/index.tsx'],
     devtool: 'cheap-source-map',
     output: {
         filename: 'm2fc.js',

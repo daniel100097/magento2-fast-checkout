@@ -7,8 +7,8 @@
     <body>
         <referenceBlock name="checkout.root" remove="true">
         </referenceBlock>
-        <referenceBlock name='checkout.m2fc'>
 
-        </referenceBlock>
+        <referenceBlock name="page.main.title" template="M2FC_M2FC::index.phtml"/>
+
     </body>
 </page>
