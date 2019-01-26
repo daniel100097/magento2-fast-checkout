@@ -1,0 +1,23 @@
+{
+    "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
+    "rules": {
+        "quotemark": [true, "single"],
+        "curly": true,
+        "max-classes-per-file": false,
+        "arrow-parens": false,
+        "eofline": true,
+        "await-promise": true,
+        "no-floating-promises": true,
+        "promise-function-async": true,
+        "no-implicit-dependencies": false,
+        "jsx-wrap-multiline": false,
+        "jsx-no-multiline-js": false,
+        "no-console": false,
+        "class-name": true,
+        "object-literal-sort-keys": false,
+        "no-submodule-imports": false,
+        "jsx-no-lambda": false,
+        "no-var-requires": true,
+        "interface-name": false
+    }
+}

@@ -1,0 +1,8 @@
+{
+  "ignore": {
+    "mdi-react": {
+      "versions": "*",
+      "reason": "bug typescript"
+    }
+  }
+}

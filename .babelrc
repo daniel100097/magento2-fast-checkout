@@ -1,0 +1,24 @@
+{
+    "presets": ["@babel/typescript", "@babel/env", "@babel/preset-react"],
+    "plugins": [
+        [
+            "babel-plugin-styled-components",
+            {
+                "fileName": true,
+                "minify": true,
+                "pure": true
+            }
+        ],
+        "graphql-tag",
+        "@babel/proposal-class-properties",
+        [
+            "@babel/plugin-proposal-decorators",
+            {
+                "legacy": false,
+                "decoratorsBeforeExport": true
+            }
+        ],
+        "@babel/proposal-object-rest-spread",
+        "@babel/plugin-syntax-dynamic-import"
+    ]
+}

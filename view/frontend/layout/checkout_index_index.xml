@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <link src="M2FC_M2FC::dist/m2fc.js"/>
+    </head>
+    <body>
+        <referenceBlock name="checkout.root" remove="true">
+        </referenceBlock>
+        <referenceBlock name='checkout.m2fc'>
+
+        </referenceBlock>
+    </body>
+</page>
