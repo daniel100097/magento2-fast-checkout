@@ -1,7 +1,7 @@
 {
     "extends": ["tslint:recommended", "tslint-react", "tslint-config-prettier"],
     "rules": {
-        "quotemark": [true, "single"],
+        "quotemark": [false, "single"],
         "curly": true,
         "max-classes-per-file": false,
         "arrow-parens": false,

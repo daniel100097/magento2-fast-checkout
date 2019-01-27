@@ -3,8 +3,6 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
         <link src="M2FC_M2FC::dist/m2fc.js"/>
-        <!-- <remove src="css/styles-m.css" /> -->
-        <css src="M2FC_M2FC::css/style-m.css" />
     </head>
     <body>
         <referenceContainer name="content">
