@@ -3,41 +3,19 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
         <link src="M2FC_M2FC::dist/m2fc.js"/>
+        <!-- <remove src="css/styles-m.css" /> -->
+        <css src="M2FC_M2FC::css/style-m.css" />
     </head>
     <body>
+        <referenceContainer name="content">
+            <referenceBlock name="authentication-popup" remove="true"/>
+        </referenceContainer>
+
         <referenceBlock name="checkout.root">
-            <arguments>
-                <argument name="jsLayout" xsi:type="array">
-                    <item name="components" xsi:type="array">
-                        <item name="checkout" xsi:type="array">
-                            <item name="children" xsi:type="array">
-                                <item name="steps" xsi:type="array">
-                                    <item name="config" xsi:type="array">
-                                        <item name="componentDisabled" xsi:type="boolean">true</item>
-                                    </item>
-                                </item>
-                                <item name="authentication" xsi:type="array">
-                                    <item name="config" xsi:type="array">
-                                        <item name="componentDisabled" xsi:type="boolean">true</item>
-                                    </item>
-                                </item>
-                                <item name="messages" xsi:type="array">
-                                    <item name="config" xsi:type="array">
-                                        <item name="componentDisabled" xsi:type="boolean">true</item>
-                                    </item>
-                                </item>
-
-                                <item name='m2fc_react' xsi:type="array">
-                                    <item name="component" xsi:type="string">M2FC_M2FC/js/view/react</item>
-                                </item>
-                            </item>
-                        </item>
-                    </item>
-                </argument>
-            </arguments>
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">M2FC_M2FC::onepage.phtml</argument>
+            </action>
         </referenceBlock>
-
-        <!-- <referenceBlock name="page.main.title" template="M2FC_M2FC::index.phtml"/> -->
 
     </body>
 </page>

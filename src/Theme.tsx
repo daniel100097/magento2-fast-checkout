@@ -2,6 +2,11 @@ import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import * as React from 'react';
 
 const theme = createMuiTheme({
+    overrides: {
+        MuiInputBase: {
+            input: { height: 'auto' },
+        },
+    },
     typography: {
         useNextVariants: true,
     },
