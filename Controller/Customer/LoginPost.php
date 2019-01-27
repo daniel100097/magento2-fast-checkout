@@ -2,7 +2,7 @@
 
 namespace M2FC\M2FC\Controller\Customer;
 
-class Index extends \Magento\Framework\App\Action\Action
+class LoginPost extends \Magento\Framework\App\Action\Action
 {
 
     public function __construct(
@@ -11,14 +11,12 @@ class Index extends \Magento\Framework\App\Action\Action
         \Magento\Customer\Api\AccountManagementInterface $customerAccountManagement,
         \Magento\Customer\Model\Url $customerHelperData,
         \Magento\Framework\Data\Form\FormKey\Validator $formKeyValidator,
-        \Magento\Customer\Model\Account\Redirect $accountRedirect,
         \Magento\Framework\Controller\Result\JsonFactory $resultJsonFactory
     ) {
         $this->session = $customerSession;
         $this->customerAccountManagement = $customerAccountManagement;
         $this->customerUrl = $customerHelperData;
         $this->formKeyValidator = $formKeyValidator;
-        $this->accountRedirect = $accountRedirect;
         $this->resultJsonFactory = $resultJsonFactory;
         parent::__construct($context);
     }
@@ -58,8 +56,11 @@ class Index extends \Magento\Framework\App\Action\Action
 
 
     /**
-    * say hello text
-    */
+     * Login post action
+     *
+     * @return \Magento\Framework\Controller\Result\Json
+     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+     */
     public function execute()
     {
         $login = ['username' => $this->getRequest()->getParam('username'), 'password' => $this->getRequest()->getParam('password')];

@@ -5,12 +5,18 @@ import {
     TextField,
     Typography,
 } from '@material-ui/core';
-import React from 'react';
+import React, { useState } from 'react';
+import { toast } from 'react-toastify';
+import useCustomerLogin from '~/hooks/useCustomerLogin';
 import useTranslate from '~/hooks/useTranslate';
 import PasswordInput from '../molecules/PasswordInput';
 
 export function CustomerLogin() {
     const { t } = useTranslate();
+    const login = useCustomerLogin();
+
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
 
     return (
         <Grid container={true} style={{ padding: '1em' }} direction="column">
@@ -26,16 +32,26 @@ export function CustomerLogin() {
                 type="email"
                 label={t('Email')}
                 margin="normal"
+                onChange={({ target: { value } }) => setUsername(value)}
             />
             <PasswordInput
                 required={true}
                 variant="outlined"
                 fullWidth={true}
                 margin="normal"
+                onChange={({ target: { value } }) => setPassword(value)}
                 label={t('Password')}
             />
             <Grid container={true} direction="row" alignItems="center">
-                <Button variant="contained" color="primary">
+                <Button
+                    onClick={() => {
+                        login({ username, password })
+                            .then(() => toast.success(t('login success')))
+                            .catch(err => toast.error(t(err.message)));
+                    }}
+                    variant="contained"
+                    color="primary"
+                >
                     {t('Sign in')}
                 </Button>
                 <Typography variant="body1" style={{ marginLeft: '0.5rem' }}>

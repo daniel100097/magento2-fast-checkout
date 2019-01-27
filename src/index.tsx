@@ -6,6 +6,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // @ts-ignore
 import JssProvider from 'react-jss/lib/JssProvider';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { createGlobalStyle } from 'styled-components';
 import Checkout from './components/ecosystem/Checkout';
 import Theme from './Theme';
@@ -25,6 +27,7 @@ async function bootstrap() {
     ReactDOM.render(
         <JssProvider jss={jss} generateClassName={generateClassName}>
             <Theme>
+                <ToastContainer />
                 <GlobalStyle />
                 <Checkout />
             </Theme>
