@@ -5,6 +5,7 @@ const theme = createMuiTheme({
     overrides: {
         MuiInputBase: {
             input: { height: 'auto' },
+            focused: { boxShadow: 'none' },
         },
     },
     typography: {
