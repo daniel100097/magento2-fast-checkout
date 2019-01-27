@@ -1,2 +1,4 @@
 node_modules
 dist
+etc/Checkout
+etc/Customer
