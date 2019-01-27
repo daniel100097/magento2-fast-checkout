@@ -19,7 +19,7 @@ export function CustomerLogin() {
     const [password, setPassword] = useState('');
 
     return (
-        <Grid container={true} style={{ padding: '1em' }} direction="column">
+        <Grid container={true} direction="column">
             <Typography variant="h5">{t('Registered Customers')}</Typography>
             <Divider style={{ margin: '1rem 0 1rem' }} />
             <Typography variant="subtitle1">
@@ -42,7 +42,12 @@ export function CustomerLogin() {
                 onChange={({ target: { value } }) => setPassword(value)}
                 label={t('Password')}
             />
-            <Grid container={true} direction="row" alignItems="center">
+            <Grid
+                container={true}
+                direction="row"
+                alignItems="center"
+                style={{ marginTop: '0.5rem', marginBottom: '0.5rem' }}
+            >
                 <Button
                     onClick={() => {
                         login({ username, password })
